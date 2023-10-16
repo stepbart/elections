@@ -17,4 +17,9 @@ public class ElectionsController {
     return electionsService.getPageText();
   }
 
+  @GetMapping("/test")
+  public String test() {
+    return "TEST";
+  }
+
 }
