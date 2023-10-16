@@ -31,9 +31,10 @@ public class ElectionsService {
         .map(value -> Math.round(value * 100.0) / 100.0)
         .collect(Collectors.toList());
 
-    var pis = Math.round((percentagesList.get(0) + percentagesList.get(4)) * 100.0) / 100.0;
-    var po = Math.round(
-        (percentagesList.get(1) + percentagesList.get(2) + percentagesList.get(3)) * 100.0) / 100.0;
+    String pis = String.valueOf(
+        Math.round((percentagesList.get(0) + percentagesList.get(4)) * 100.0) / 100.0);
+    String po = String.valueOf(Math.round(
+        (percentagesList.get(1) + percentagesList.get(2) + percentagesList.get(3)) * 100.0) / 100.0);
 
     return "PIS i Konfederacja ma " + pis + "% głosów" +
         ", a opozycja (KO + Trzecia Droga + Lewica) " + po + "% głosów";
